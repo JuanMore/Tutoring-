@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mochiy+Pop+One&family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffff;
+    font-size: 16px;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utils */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+    align-items: left;
+    border: none;
+}
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 100px;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+/* Hamburger menu */
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 21px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+/* Nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+.main-nav .navbar-brand {
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    padding: 0 20px;
+}
+
+.main-nav ul li a {
+    margin-bottom: 2px;
+    font-size: 15px;
+    color: #333;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid magenta;
+}
+
+.right-menu i {
+    cursor: pointer;
+}
+
+/* Showcase */
+.showcase {
+    width: 100%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    text-align: left;
+    padding: 100px 40px;
+}
+
+.showcase h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.showcase h2 {
+    width: 80%;
+    text-align: start;
+    font-weight: lighter;
+    margin-bottom: 20px;
+
+}
+
+.showcase img {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Home Cards */
+
+.home-cards {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 240px;
+}
+
+.home-cards img {
+    border-radius: 2px;
+    width: 100%;
+}
+
+.home-cards .btn-primary {
+    border-radius: 50px;
+}
+
+.card-content {
+    margin-bottom: 50px;
+}
+
+/* Learning */
+.learning {
+    width: 100%;
+    height: 450px;
+    padding: 100px 40px;
+    background: url('/imgs/learning.jpeg') no-repeat center center/cover;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+.learning .content {
+    float: right;
+    text-align: start;
+    width: 40%;
+    padding: 10px 0 50px 0;
+}
+
+.learning .content h2 {
+    font-size: 28px;
+}
+
+.learning .content h2,
+.content p {
+    font-weight: 500;
+    color: #000;
+    margin: 10px 0 20px;
+}
+
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .showcase {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .main-nav .navbar-brand {
+        margin-left: 0;
+    }
+
+    .main-nav ul.main-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f2f2f2;
+        height: 400px;
+        width: 70%;
+        border-radius: #ccc 1px solid;
+        padding: 30px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .main-nav ul.main-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .main-nav ul.main-menu li {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .main-nav .right-menu i {
+        margin-right: 50px;
+    }
+
+    .main-nav ul li {
+        padding: 0 5px;
+    }
+
+    .home-cards {
+        margin-top: 20px;
+        padding: 0;
+        height: 100%;
+        gap: 10%;
+    }
+
+    .showcase img {
+        margin-top: 20px;
+    }
+
+    .home-cards img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+}
